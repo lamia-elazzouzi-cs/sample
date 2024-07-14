@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <title>City Weather Report</title>
+    </head>
+    <body>
+       <h1>City Weather Report</h1>
+
+        <form id="weatherFormCity">
+            <fieldset>
+                <legend>Get weather using City <em>name</em></legend>
+
+                <label for="city">Enter City:</label>
+                <input type="text" id="city" name="city">
+                <br/><br/>
+                <button type="submit">Get Weather</button>
+            </fieldset>
+        </form>
+
+
+        <br/>
+        <form id="weatherFormCoordinates">
+            <fieldset>
+                <legend>Get weather using <em>Lat & Long coordinates</em></legend>
+                
+                <label>Longitude: <output id="lon_value"></output></label>
+                <br/>
+                <input type="range" id="longitude" name="longitude" 
+                    min="-180" max="180" value="90" step="5.00" />
+                <br/>
+                <label>Latitude: <output id="lat_value"></output></label>
+                <br/>
+                <input type="range" id="latitude" name="latitude" 
+                        min="-90" max="90" value="45" step="5.00" />
+                
+                <br/>
+                <button type="submit">Get Weather</button>
+            </fieldset>
+        </form>
+        
+        <div id="weatherInfo"></div>
+    
+    
+        <script src="./weather_report.js"></script>
+    </body>
+    </html>
